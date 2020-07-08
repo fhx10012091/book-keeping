@@ -10,7 +10,8 @@ const items = [
     category: {
       id: '1',
       name: '旅游',
-      type: 'outcome'
+      type: 'outcome',
+      iconName: 'ios-plane'
     }
   }
 ]
