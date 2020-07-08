@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PriceList from './components/PriceList'
+import ViewTab from './components/ViewTab'
+import TotalPrice from './components/TotalPrice'
+import {LIST_VIEW, CHART_VIEW} from './utility'
 const items = [
   {
     id: '1',
@@ -16,13 +19,18 @@ const items = [
   }
 ]
 const App = () => {
+  const [view, setView] = useState(LIST_VIEW)
   return (
     <div className="App">
+      <TotalPrice income={2000} outcome={3000}/>
+      <ViewTab 
+        onTabChange={(view) => {setView(view)}}
+        activeTab={view}/>
       <PriceList 
-      items={items} 
-      onModifyItem={(item) => alert(item.id)}
-      onDeleteItem={(item) => alert(item.id)}
-      />
+        items={items} 
+        onModifyItem={(item) => alert(item.id)}
+        onDeleteItem={(item) => alert(item.id)}
+        />
     </div>
   );
 }
