@@ -9,14 +9,13 @@ const ViewTab = ({activeTab, onTabChange}) => {
     return (
         <ul className="nav nav-tabs nav-fill my-4">
             <li className="nav-item">
-                <a 
-                    onClick={(e) => {
+                <a onClick={(e) => {
                         e.preventDefault()
                         onTabChange(LIST_VIEW)
                     }}
                     className={genertorClass(activeTab, LIST_VIEW)} 
                     href="#">
-                    <Ionicon
+                    <Ionicon                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
                         className="rounded-circle mr-2"
                         fontSize="25px"
                         color="#007bff"
