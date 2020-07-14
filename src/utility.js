@@ -1,5 +1,8 @@
 export const LIST_VIEW = 'list'
 export const CHART_VIEW = 'chart'
+export const IN_COUNT = 'income'
+export const OUT_COUNT = 'outcome'
+
 
 export const padLeft = (n) => {
     return n < 10 ? '0' + n : n
