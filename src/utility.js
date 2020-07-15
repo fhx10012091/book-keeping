@@ -15,3 +15,18 @@ export const range = (size, startAt = 0) => {
     }
     return arr
 }
+
+export const parseToYearOrMonth = (str) => {
+    const date = str ? new Date(str) : new Date();
+    let month = date.getMonth(), year = date.getFullYear();
+    if(month === 12){
+        year += 1
+        month = 1
+    } else {
+        month += 1
+    }
+    return {
+        year,
+        month
+    }
+}
